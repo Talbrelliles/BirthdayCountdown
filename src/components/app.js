@@ -2,10 +2,34 @@ import React, { Component } from 'react';
 import Picker from './picker';
 import Button from './button';
 import Clock from './clock';
+import ChangeDate from './changeDate';
+
 export default class App extends Component {
-  render() {
+ 
    // return <div className=""> <Clock/> </div>
     
+    constructor(props) {
+      super(props)
+      
+      this.state ={
+        active: false
+      }
+      
+      
+    }
+    
+    renderItems = function(){
+     if(this.state.active) {
+        return [
+          <Clock />,
+         ChangeDate('Change Date', () => this.setState({ active: false}))
+        ]
+     }else{
+       return Button('Generate Countdown', ()=> this.setState({active: true}) )
+     }
+    }.bind(this)
+    
+     render() {
     return (
       <div className="grid">
       <h1 className="grid__title">Birthday Countdown</h1>
@@ -22,8 +46,8 @@ export default class App extends Component {
        
        
        <Picker/>
-      { Button('Generate Countdown')}
-      <Clock />
+     {this.renderItems() }
+     
       </div>
     );
   }
