@@ -1,0 +1,15 @@
+.change-date{
+    grid-row: 2/3;
+    grid-column: 4/3;
+    font-size: 24px;
+    text-align: center;
+    font-family: "Roboto";
+    color: white;
+    
+    background-color: transparent;
+    border: none;
+    transform: rotate(-72deg);
+    
+    align-self: start;
+    justify-self: start;
+}
