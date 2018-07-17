@@ -12,4 +12,9 @@
     
     align-self: start;
     justify-self: start;
+    
+    &:focus{
+        outline: none;
+    }
+    
 }

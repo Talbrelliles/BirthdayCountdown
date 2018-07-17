@@ -1,0 +1,10 @@
+.large-text{
+    grid-row: 1/3;
+    grid-column: 8/9;
+    align-content: center;
+    justify-self: center;
+    
+    color: $color-gray-two;
+    font-family: 'Montserrat';
+    font-size: 220px;
+}
